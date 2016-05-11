@@ -5,7 +5,7 @@ var curr_date = today.getDate();
 var curr_month = today.getMonth();
 var curr_year = today.getFullYear();
 
-$("#todayDate").html(m_names[curr_month] + ". " + curr_date + ", " + curr_year);
+$("#todayDate").html(m_names[curr_month] + " " + curr_date + ", " + curr_year);
 $("#datepicker").datepicker();
 
 function daysLeft() {
@@ -13,11 +13,16 @@ function daysLeft() {
 	// solutions for 9, 10, 11 and 12 go here:
 
 	// var b = _____
+	var b = today.getTime();
 	// var c = _____
+	var c = 86400000;
 	// var d = _____
+	var d = Math.round(diffdays);
 
 	// we will remove this later:
 	return a;
+
+	//Math.round(x) - will round x to nearest integer
 }
 
 
