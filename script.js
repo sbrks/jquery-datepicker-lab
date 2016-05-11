@@ -17,7 +17,7 @@ function daysLeft() {
 // 13. You are almost there!
 // We need a variable where we can store the integer value difference of days and display that in a concatenated HTML string.
 // "You have ____ days left!"
-
+    var diffDaysString = "You have " + diffDays + " days left!";
 }
 
 $("#datepicker").on("change", function(){
@@ -27,9 +27,12 @@ $("#datepicker").on("change", function(){
 // Use jQuery to write the result string in the element with an id of 'result'
 
 // _____
-
+	$("#result").on("click", function () {
+		diffDaysString();
+	
 });
 
 // UH-OH! We defined the variable inside daysLeft and we need the same data in our .on('change', function(){})
 // 15. Define the variable globally and leave your local variable references alone.
 
+var diffDaysString = "You have " + daysLeft + " days left!";
