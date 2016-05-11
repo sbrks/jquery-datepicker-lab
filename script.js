@@ -16,7 +16,9 @@ function daysLeft() {
     var diffDays = Math.round((a - b)/c);
 
     resultString = ("<p>You have " + diffDays + " days left!");
+
 }
+
 
 $("#datepicker").on("change", function(){
     daysLeft();
@@ -29,7 +31,21 @@ $("#datepicker").on("change", function(){
 // For the highly ambitious, you may write a couple if statements and customize the result HTML string accordingly.
 // Here are the possibilities I've thought of; there may be more.
 // condition 1:  there is an input but someone has selected a date in the past
+
+
 // condition 2:  there is an input and the day is tomorrow
+/*
+if (daysLeft !== 1) {
+	$("#datepicker").on("change", function(){
+    daysLeft();
+    $("#result").html(resultString);
+});
+}
+else {
+	"That's tomorrow!";
+}
+
+*/
 // condition 3:  there is an input and the date is in the future
 // condition 4:  there is NO input but someone has selected a date in the past
 // condition 5:  there is NO input and the day is tomorrow
